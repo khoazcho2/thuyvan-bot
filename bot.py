@@ -91,6 +91,7 @@ async def start_webhook():
 # ================= POLLING =================
 
 async def start_polling():
+    await bot.delete_webhook(drop_pending_updates=True)  # 👈 thêm dòng này
     await on_startup()
 
     try:
