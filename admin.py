@@ -32,7 +32,7 @@ async def start_cmd(message: types.Message):
 
 @router.message(Command("help"))
 async def help_cmd(message: types.Message):
-  help_text = """<b>Các lệnh có sẵn:</b>
+  help_text = "VERSION 2 - TEST"
 
 <i>Admin (Chỉ chủ group hoặc admin):</i>
 /ban - Ban user (reply)
