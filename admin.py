@@ -32,31 +32,32 @@ async def start_cmd(message: types.Message):
 
 @router.message(Command("help"))
 async def help_cmd(message: types.Message):
-    help_text = """<b>Cac lenh co san:</b>
+  help_text = """<b>Các lệnh có sẵn:</b>
 
-<i>Admin (Chi chu group hoac admin):</i>
+<i>Admin (Chỉ chủ group hoặc admin):</i>
 /ban - Ban user (reply)
 /unban - Unban user (reply)
 /mute [phut|giay] - Mute user (reply)
-   VD: /mute 5 (5 phut) hoac /mute 30s (30 giay)
-/locklink - Bat chan link
-/unlocklink - Tat chan link
-/lock18 - Bat chan 18+ (anh + link)
-/unlock18 - Tat chan 18+
-/lock18image - Bat chan anh 18+
-/unlock18image - Tat chan anh 18+
-/lock18link - Bat chan link 18+
-/unlock18link - Tat chan link 18+
-/schedule [phut] [noi_dung] - Tin nhan dinh ky
-/unschedule - Tat tin nhan dinh ky
+/locklink - Bật chặn link
+/unlocklink - Tắt chặn link
+/lock18 - Bật chặn 18+
+/unlock18 - Tắt chặn 18+
+/lock18image - Bật chặn ảnh 18+
+/unlock18image - Tắt chặn ảnh 18+
+/lock18link - Bật chặn link 18+
+/unlock18link - Tắt chặn link 18+
+/schedule [phut] [noi_dung] - Tin nhắn định kỳ
+/unschedule - Tắt tin nhắn định kỳ
+/setwelcome - Đặt tin nhắn chào mừng
 
-<i>Bot Owner (Chi nguoi tao bot):</i>
-/banglobal - Ban global (reply) - Tat ca nhom
-/unbanglobal - Unban global (reply)
+<i>Bot Owner:</i>
+/banglobal - Ban global
+/unbanglobal - Unban global
 
-<i>Khac:</i>
-/start - Kiem tra bot
-/help - Xem danh sach lenh"""
+<i>Khác:</i>
+/start - Kiểm tra bot
+/help - Xem danh sách lệnh
+""" 
     await message.answer(help_text)
 
 @router.message(Command("ban"))
