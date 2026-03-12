@@ -389,3 +389,5 @@ async def global_group(message: types.Message, bot: Bot):
         f"✅ Đã gửi: {sent} nhóm\n"
         f"❌ Lỗi: {failed} nhóm"
     )
+
+
