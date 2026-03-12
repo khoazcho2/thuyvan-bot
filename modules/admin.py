@@ -7,7 +7,14 @@ import logging
 
 router = Router()
 logger = logging.getLogger(__name__)
+from aiogram import Router, types
+from aiogram.filters import Command
 
+router = Router()
+
+@router.message(Command("start"))
+async def start(message: types.Message):
+    await message.answer("🤖 Bot đang hoạt động!")
 # Sử dụng bot_groups từ global_ban module (sẽ được import động)
 bot_groups = None
 
