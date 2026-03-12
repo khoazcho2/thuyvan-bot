@@ -1,7 +1,4 @@
 import os
 
-TOKEN = os.getenv("BOT_TOKEN", "").strip()
-
-
-# ID của người tạo bot (người duy nhất dùng được lệnh /banglobal)
-OWNER_ID = int(os.getenv("OWNER_ID", "0"))
+TOKEN = os.environ["BOT_TOKEN"].strip()
+OWNER_ID = int(os.environ.get("OWNER_ID", "0").strip())
