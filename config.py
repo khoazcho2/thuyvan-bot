@@ -1,6 +1,10 @@
 import os
 
-TOKEN = os.getenv("BOT_TOKEN", "8643690918:AAEN1ENqPWmHhovnlgtEFWDtvEctX4zzm4k").strip()
+TOKEN = os.getenv("BOT_TOKEN").strip()
 
-# ID của người tạo bot (người duy nhất dùng được lệnh /banglobal)
-OWNER_ID = int(os.getenv("OWNER_ID", "8337495954") or "0")
+# Safe OWNER_ID parse - Railway env format ' =8337495954'
+owner_str = os.getenv("OWNER_ID")
+if owner_str:
+    # Remove leading '=' if Railway format
+    owner_str = owner_str.lstrip(' =')
+OWNER_ID = int(owner_str or "8337495954")
