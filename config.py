@@ -1,6 +1,6 @@
 import os
 
-TOKEN = os.getenv("8643690918:AAFp0JBowdDIYvqAqtbXysjwm5mP5y0tOek").strip()
+TOKEN = os.getenv("BOT_TOKEN").strip()
 
 # Safe OWNER_ID parse - Railway env format ' =8337495954'
 owner_str = os.getenv("OWNER_ID")
