@@ -9,7 +9,7 @@ router = Router()
 logger = logging.getLogger(__name__)
 
 # Sử dụng bot_groups từ global_ban module (sẽ được import động)
-bot_groups = None
+bot_groups = {}
 
 async def is_owner(message: types.Message):
     """Kiểm tra nếu người dùng là người tạo bot"""
